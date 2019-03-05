@@ -8,20 +8,26 @@
 > 社区发现是一项用于理解现实世界众多的网络结构的重要方法。复杂网络往往具有社区结构，传统的聚类方法诸如 k-means 只能在小数据集或结构规律的网络中进行社区发现，对于大规模复杂数据集则无法有效发现社区。本实验实现了一 种在使用传统聚类算法的基础上，进一步通过深度学习来提高聚类精度的算法。在实验中通过构建了一种能够显示节点 之间间接联系的相似度矩阵，并进一步使用了基于无监督学习的方式构建深度稀疏自动编码器进行降维，提取网络中的 特征结构，提取得到的结果再使用k-means 进行聚类，最终得到社区。多次实验取得的平均结果显示，相似度矩阵具有 比邻接矩阵更好的聚类结果，在使用相似度矩阵的基础上使用深度稀疏自动编码器可以进一步提高在大数据集上的聚类准确度。
 
 CoDDA是本次实验的主要算法，根据文章[基于深度稀疏自动编码器的社区发现算法](http://www.cnki.net/kcms/detail/11.2560.TP.20161129.1335.017.html)一文实现<br>
->*运行环境: Matlab 2015b*
->*操作系统: Windows Server 2012 R2*
->*运行内存: 64G* 
+>*运行环境: Matlab 2015b*<br>
+>*操作系统: Windows Server 2012 R2*<br>
+>*运行内存: 64G*<br>
 
->点击CoDDA\start_all.m文件运行CoDDA算法<br>
 >在执行前建议输入命令 warning off 以关闭警告<br>
 
-目前实现了strike，football，livejournal三个数据集<br>
-需要那个实验集就取消 %% xxx实验集所涉及的代码注释并运行即可(可在start_all文件中修改)<br>
+>点击 [`CoDDA\start_all.m`](https://github.com/akweury/CoDDA/blob/master/code/CoDDA/start_all.m) 文件可以运行CoDDA算法<br>
 
-实验聚类结果储存在CoDDA目录下的cls.txt文件中，按照1-n的顺序存储各个点所属的社区。注意：聚类结果只存储最后一次。<br>
+
+目前实现了strike，football，livejournal三个数据集<br>
+需要哪个实验集就取消 %% xxx实验集所涉及的代码注释并运行即可(可在[`CoDDA\start_all.m`](https://github.com/akweury/CoDDA/blob/master/code/CoDDA/start_all.m) 文件中修改)<br>
+
+实验聚类结果储存在CoDDA目录下的[`cls.txt`](https://github.com/akweury/CoDDA/blob/master/code/CoDDA/cls.txt)文件中，按照1-n的顺序存储各个点所属的社区。注意：聚类结果只存储了最后一次。<br>
 
 ## 实验文件
-即start_strike.m, start_football.m, start_livejournal.m三个文件，可以调节以下参数<br>
+
+即
+[`start_strike.m`](https://github.com/akweury/CoDDA/tree/master/code/CoDDA/start_strike.m), 
+[`start_football.m`](https://github.com/akweury/CoDDA/tree/master/code/CoDDA/start_football.m), 
+[`start_livejournal.m`](https://github.com/akweury/CoDDA/tree/master/code/CoDDA/start_livejournal.m)三个文件，可以调节以下参数<br>
 
 * maxTimes 实验迭代次数
 * 执行哪些实验也是可选择的，使用开关进行管理。1 = on  0 = off，其中：
