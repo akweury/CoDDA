@@ -21,12 +21,12 @@ CoDDA是本次实验的主要算法<br>
 即start_strike.m, start_football.m, start_livejournal.m三个文件，可以调节以下参数<br>
 
 * maxTimes 实验迭代次数
-* 执行哪些实验也是可选择的，使用开关进行管理。1 = on    0 = off
-S_shuffle 跳数阈值实验 
-sigema_shuffle 衰减因子实验
-T_shuffle 稀疏自编码器层数实验
-beta_shuffle 惩罚因子权重实验
-Lambda_shuffle 权重衰减项
+* 执行哪些实验也是可选择的，使用开关进行管理。1 = on  0 = off，其中：
+	* S_shuffle 跳数阈值实验 
+	* sigema_shuffle 衰减因子实验
+	* T_shuffle 稀疏自编码器层数实验
+	* beta_shuffle 惩罚因子权重实验
+	* Lambda_shuffle 权重衰减项
 
 其他参数命名：
 k   社区个数
@@ -46,7 +46,8 @@ maxSigemaTimes  衰减因子迭代次数
 每个实验文件start_strike.m, start_football.m, start_livejournal.m都会进行两轮实验，每轮实验都是一次完整的过程，但是每轮实验中执行哪些实验是可以选择的。可以自行更改上面的参数。但是注意，第二轮实验之可以更改 执行实验开关，以及迭代次数。但是实验参数无法修改,需要使用第一轮实验的输出参数作为第二轮的输入参数。<br>
 
 
-## 文件夹dataset保存了实验数据。
+## 实验数据
+实验数据保存在dataset文件夹中<br>
 
 data_strike文件夹
 	strike.txt 为邻接矩阵
