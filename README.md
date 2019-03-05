@@ -22,28 +22,29 @@ CoDDA是本次实验的主要算法<br>
 
 * maxTimes 实验迭代次数
 * 执行哪些实验也是可选择的，使用开关进行管理。1 = on  0 = off，其中：
-	* S_shuffle 跳数阈值实验 
-	* sigema_shuffle 衰减因子实验
-	* T_shuffle 稀疏自编码器层数实验
-	* beta_shuffle 惩罚因子权重实验
-	* Lambda_shuffle 权重衰减项
+	* S_shuffle 		跳数阈值实验 
+	* sigema_shuffle 	衰减因子实验
+	* T_shuffle 		稀疏自编码器层数实验
+	* beta_shuffle 		惩罚因子权重实验
+	* Lambda_shuffle 	权重衰减项
+* 其他参数：
+	* k 				社区个数
+	* T   				深度稀疏自动编码器的层数
+	* d 				每层的节点数
 
-其他参数命名：
-k   社区个数
-T   深度稀疏自动编码器的层数
-d   每层的节点数
+	* S   				跳数阈值
+	* sigema  			衰减因子
 
-S   跳数阈值
-sigema  衰减因子
+	* minS  			最小跳数阈值
+	* maxS  			最大跳数阈值
+	* maxSigemaTimes 	跳数阈值迭代次数
+	* minSigema  		最小衰减因子的十倍
+	* maxSigema  		最大衰减因子的十倍
+	* maxSigemaTimes  	衰减因子迭代次数
 
-minS  最小跳数阈值
-maxS  最大跳数阈值
-maxSTimes  跳数阈值迭代次数
-minSigema  最小衰减因子的十倍
-maxSigema  最大衰减因子的十倍
-maxSigemaTimes  衰减因子迭代次数
+每个实验文件start_strike.m, start_football.m, start_livejournal.m都会进行**两轮实验**，每轮实验都是一次完整的过程，但是每轮实验中执行哪些实验是可以选择的。可以自行更改上面的参数。<br><br>
 
-每个实验文件start_strike.m, start_football.m, start_livejournal.m都会进行两轮实验，每轮实验都是一次完整的过程，但是每轮实验中执行哪些实验是可以选择的。可以自行更改上面的参数。但是注意，第二轮实验之可以更改 执行实验开关，以及迭代次数。但是实验参数无法修改,需要使用第一轮实验的输出参数作为第二轮的输入参数。<br>
+注意：第二轮实验之可以更改执行实验开关，以及迭代次数。但是实验参数无法修改,需要使用第一轮实验的输出参数作为第二轮的输入参数。<br>
 
 
 ## 实验数据
