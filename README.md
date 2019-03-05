@@ -1,10 +1,11 @@
-# CoDDA
-
 复制本实验时，需要复制整个code文件夹，请不要破坏code文件夹内部的文件树状结构，否则程序将会无法正常运行。<br>
 复制本实验时，需要复制整个code文件夹，请不要破坏code文件夹内部的文件树状结构，否则程序将会无法正常运行。<br>
 复制本实验时，需要复制整个code文件夹，请不要破坏code文件夹内部的文件树状结构，否则程序将会无法正常运行。<br>
 
 ***
+# 基于深度学习的社区发现算法实现与对比
+
+> 社区发现是一项用于理解现实世界众多的网络结构的重要方法。复杂网络往往具有社区结构，传统的聚类方法诸如 k-means 只能在小数据集或结构规律的网络中进行社区发现，对于大规模复杂数据集则无法有效发现社区。本实验实现了一 种在使用传统聚类算法的基础上，进一步通过深度学习来提高聚类精度的算法。在实验中通过构建了一种能够显示节点 之间间接联系的相似度矩阵，并进一步使用了基于无监督学习的方式构建深度稀疏自动编码器进行降维，提取网络中的 特征结构，提取得到的结果再使用k-means 进行聚类，最终得到社区。多次实验取得的平均结果显示，相似度矩阵具有 比邻接矩阵更好的聚类结果，在使用相似度矩阵的基础上使用深度稀疏自动编码器可以进一步提高在大数据集上的聚类 准确度。
 
 CoDDA是本次实验的主要算法<br>
 运行环境: Matlab 2015b<br>
@@ -50,28 +51,27 @@ CoDDA是本次实验的主要算法<br>
 ## 实验数据
 实验数据保存在dataset文件夹中<br>
 
-data_strike文件夹
-	strike.txt 为邻接矩阵
-	strikecoordinate.txt为数据集的点坐标，用于显示Matlab图像
-	realresult.txt为真实社区
-	strike.paj可以使用pajek可视化软件进行可视化。
-data_football文件夹
-	football_adjacency.txt 为邻接矩阵
-		football_coordinate.txt为数据集的点坐标，用于显示Matlab图像
-		football_community.txt为真实社区
-		其他文件用于pajek可视化软件进行可视化。
-	data_livejournal文件夹
-		lj_ade.txt是邻接矩阵
-		lj_coordinate.txt 为数据集的点坐标，用于显示Matlab图像
-		lj_coms.txt为真实社区
-		[实验集](http://snap.stanford.edu./data/com-LiveJournal.html)由斯坦福大学提供 本次实验选取其中最大的8个社区一共6368个节点进行聚类，其中big.dataset文件为整个livejournal实验数据集。
-	data_orkut文件夹（由于机器能力有限，未参加本次实验）
-		orkut_adj.txt是邻接矩阵
-		orkut_coms.txt是真实社区
-		[实验集](http://snap.stanford.edu./data/com-Orkut.html)由斯坦福大学提供。
-
+* data_strike文件夹
+	* strike.txt 为邻接矩阵
+	* strikecoordinate.txt为数据集的点坐标，用于显示Matlab图像
+	* realresult.txt为真实社区
+	* strike.paj可以使用pajek可视化软件进行可视化。
+* data_football文件夹
+	* football_adjacency.txt 为邻接矩阵
+	* football_coordinate.txt为数据集的点坐标，用于显示Matlab图像
+	* football_community.txt为真实社区
+	* 其他文件用于pajek可视化软件进行可视化。
+* data_livejournal文件夹
+	* lj_ade.txt是邻接矩阵
+	* lj_coordinate.txt 为数据集的点坐标，用于显示Matlab图像
+	* lj_coms.txt为真实社区
+	* [实验集](http://snap.stanford.edu./data/com-LiveJournal.html)由斯坦福大学提供 本次实验选取其中最大的8个社区一共6368个节点进行聚类，其中big.dataset文件为整个livejournal实验数据集。
+* data_orkut文件夹（由于机器能力有限，未参加本次实验）
+	* orkut_adj.txt是邻接矩阵
+	* orkut_coms.txt是真实社区
+	* [实验集](http://snap.stanford.edu./data/com-Orkut.html)由斯坦福大学提供。
 <br>
 
-文件夹[mit_network_analysis_tools](http://strategic.mit.edu/downloads.php?page=matlab_networks)是麻省理工学院提供的一个工具包<br><br>
+##### 文件夹[mit_network_analysis_tools](http://strategic.mit.edu/downloads.php?page=matlab_networks)是麻省理工学院提供的一个工具包<br><br>
 
-文件夹LPA是LPA算法的Matlab实现，基于2015b版本<br>
+##### 文件夹LPA是LPA算法的Matlab实现，基于2015b版本<br>
